@@ -22,5 +22,10 @@ const Math = new function() {
     }else if(unitat == "km/h" && unitatPerTransformar == "km/h"){
        return valor * 0.2777777777777778;
     }
+    if((unitat == "j" || unitat == "J" || unitat == "joules" || unitat == "joule" || unitat == "Joules" || unitat == "Joule") && unitatPerTransformar == "cal"){
+      return valor * 0.2388458966275;
+    }else if(unitat == "cal" && unitatPerTransformar == (unitat == "J" || unitat == "joules" || unitat == "joule" || unitat == "Joules" || unitat == "Joule")){
+      return valor * 4.1868;
+    }
   }
 }
