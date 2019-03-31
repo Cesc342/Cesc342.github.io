@@ -18,9 +18,9 @@ const Math = new function() {
   }
   this.transform = function(valor,unitat,unitatPerTransformar){
     if(unitat == "m/s" && unitatPerTransformar == "km/h"){
-       raturn valor * 3.6;
+       return valor * 3.6;
     }else if(unitat == "km/h" && unitatPerTransformar == "km/h"){
-      return valor * 0.2777777777777778;
+       return valor * 0.2777777777777778;
     }
   }
 }
