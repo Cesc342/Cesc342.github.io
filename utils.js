@@ -19,15 +19,15 @@ const Math = new function() {
   this.transform = function(valor,unitat,unitatPerTransformar){
     if(unitat == "m/s" && unitatPerTransformar == "km/h"){
        return valor * 3.6;
-    }else if(unitat == "km/h" && unitatPerTransformar == "km/h"){
+    }else if(unitat == "km/h" && unitatPerTransformar == "km/s"){
        return valor * 0.2777777777777778;
     }else if((unitat == "j" || unitat == "J" || unitat == "joules" || unitat == "joule" || unitat == "Joules" || unitat == "Joule") && unitatPerTransformar == "cal"){
       return valor * 0.2388458966275;
     }else if(unitat == "cal" && unitatPerTransformar == (unitat == "J" || unitat == "joules" || unitat == "joule" || unitat == "Joules" || unitat == "Joule")){
       return valor * 4.1868;
-    }else if(unitat == "€" && unitatPerTransformar == "$"){
+    }else if(unitat == "€" && (unitatPerTransformar == "dolar" || unitatPerTransformar == "Dolar" || unitatPerTransformar == "$")){
       return unitat * 1.12;
-    }else if(unitat == "$" && unitatPerTransformar == "€"){
+    }else if((unitat == "dolar" || unitat == "Dolar" || unitat == "$") && unitatPerTransformar == "€"){
       return unitat * 0.89;
     }else{
       console.error("No s'ha trobat la maner de convertir la tava unitat");
