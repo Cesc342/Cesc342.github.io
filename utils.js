@@ -16,6 +16,8 @@ const Math = new function() {
     this.num = 299792458;
     this.unitat = "m/s"
   }
+  th
+  
   this.transform = function(valor,unitat,unitatPerTransformar){
     if(unitat == "m/s" && unitatPerTransformar == "km/h"){
        return valor * 3.6;
