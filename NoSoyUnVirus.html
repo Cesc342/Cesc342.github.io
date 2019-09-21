@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var pag1;
+      var pag2;
+      pagOberta1 = false;
+      pagOberta2 = false;
+      sumar = true;
+      mercadona = new Audio("https://cesc342.github.io/La_canci%C3%B3n_de_Mercadona.mp3");
+      ascensor = new Audio("https://cesc342.github.io/Musica_Elevador.mp3");
+      alert("Clica aceptar y epere 2 minutos para su premio")
+      alert("AVISO: Ponte auriculares y acepta la opcion de permitir abir las paginas emergentes antes de empezar porque sino no funcionara")
+      alert("Si lo no lo aceptas te saldra al final la peticion, asi que aceptala PERO REINICALO porque sino no funcionara")
+      v = 0;
+      contador = true;
+      function FBI(){
+        //Ya vera para que sirve JeJeJe
+          pag1.close();
+          pag2.close()
+          lloc.innerHTML = "FBI, LA CAGASTE MARRANO, ESTO ES UN ORDENADOR CRISTIANO";
+          llocImage.src = "https://cesc342.github.io/Memes/00image0_-_copia.jpg";
+          open("https://youtu.be/08vk9g-jcsM","",'width="700px", height="700px"');
+          pagOberta2 = true;
+      }
+
+      function sumador(){
+        progres = document.getElementById("progres");
+        llocV = document.getElementById("v");
+        lloc = document.getElementById("lloc");
+        llocImage = document.getElementById("image");
+        if(sumar){
+          v++;
+        }
+        if (v>10&&v<20) {
+          lloc.innerHTML = "El 100% de las muertes ocurren en la Tierra";
+        }else if (v>20&&v<30) {
+          lloc.innerHTML = "En la madre Russia la fisica no obedece sus leyes, la fisica obedece las leyes de la madre Russia";
+        }else if (v>30&&v<40) {
+          lloc.innerHTML = "No renuncies a tus sueños, sigue durmiendo.";
+        }else if (v>40&&v<50) {
+          lloc.innerHTML = "Sabias que Lionel Messi es llamado Lionel Messi porque su primer nombre es Lionel y su apellido es Messi.";
+        }else if (v>50&&v<60) {
+          lloc.innerHTML = "A veces los autos son mas veloces que las personas.";
+        }else if (v>60&&v<70) {
+          lloc.innerHTML = "Esta pagina esta protagonizada por Mercadona.";
+          if(v==65){
+            mercadona.play();
+          }
+        }else if (v>70&&v<75) {
+          lloc.innerHTML = "Venga, vamos a poner algo de musica de ambiente...";
+          if(v = 74){
+            ascensor.play();
+          }
+        }else if (v>75&&v<80) {
+          lloc.innerHTML = "Asi es muuuucho mejor...";
+        }else if (v>80&&v<90) {
+          lloc.innerHTML = "Ahora te pondre algunas imagenes, disfrutalas.";
+        }else if (v>90&&v<105) {
+          lloc.innerHTML = "Empecemos con las noticias del dia: ";
+          llocImage.src="https://cesc342.github.io/Memes/IMG-20190313-WA0002.jpg";
+        }else if (v>105&&v<110) {
+          llocImage.src="https://cesc342.github.io/Memes/2143269888_n.jpg";
+        }else if (v>110&&v<120) {
+          lloc.innerHTML = "Nuevas imagenes de The Legend Of Zelda: Breath of the Wild 2: ";
+          llocImage.src="https://cesc342.github.io/Memes/Screenshot_20190326-134842.png";
+        }else if (v>110&&v<120) {
+          lloc.innerHTML = "Venga solo faltan "+ ((v-120)*-1) +" segundos!!!";
+          llocImage.src="";
+        }else if (v>120&&v<125) {
+          ascensor.pause();
+          lloc.innerHTML = "Abriendo pagina...";
+          contador = false;
+          if(v = 124 && !pagOberta1){
+            pag1 = open("https://youtu.be/DOXh4sN0tLY","",'width="300px", height="500px",left="300"');
+            pag2 = open("https://listas.20minutos.es/lista/lolis-anime-360230/","",'width="300px", height="500px"');
+            sumar = false;
+            setTimeout(FBI,3000);
+            pagOberta1 = true;
+          }
+        }
+
+        if(contador){
+          progres.value = v;
+          llocV.innerHTML = (Math.floor((v/120) * 1000)/10) +"%";
+        }
+      }
+
+      setInterval(sumador,1000);
+    </script>
+    <br><br><br><br><br><br><br>
+    <center>
+      <progress id="progres" value="0" max="120">0%</progress>
+      <div id="v">
+
+      </div>
+      <br>
+      <br>
+      <div id="lloc">
+        Empezando...
+      </div>
+      <br>
+      <img id="image" style="height:300; width:100;" src="" alt="">
+    </center>
+    </body>
+</html>
