@@ -52,7 +52,8 @@ function teparCostatsSiCreuElCentre() {
   //Varaible on es guardara la posicio
   pos = "";
   //Mira si les esquines estan tepades i si no estan tepades busca quina pot tapar
-  if(!siEsquinesTepades()){
+  //També si hi ha una creu el mix perquè aquesta tecnica només serveix com a defensa.
+  if(!siEsquinesTepades() && siHiHaCreuElMix()){
     //Variable on dire si s'ha trobat el lloc
     tornarATriarLloc = true;
     //Mira si pots ficar alguna creu a la esquina
@@ -225,4 +226,15 @@ function siEsquinesTepades() {
   }
   //Torna si estan ocupade o no
   return esquinesOcupades;
+}
+
+function siHiHaCreuElMix() {
+  //Variable on es guardara si hi ha una creu el mix
+  hiHaCreuElMix = false;
+  //Mira si hi ha una creu el mix i si hi ha estebleix la variable en True
+  if(mapaClicks[1][1] == 1){
+    hiHaCreuElMix = true;
+  }
+  //Torna si hi ha una creu el mix
+  return hiHaCreuElMix;
 }
