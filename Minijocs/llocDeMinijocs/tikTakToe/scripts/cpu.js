@@ -1,5 +1,10 @@
 //Tot aquest script és exclusivament per la CPU
 
+//Diu si el centre esta tepat o no
+centraTepat = false;
+//Mira si totes les esquines estan ja ocupades
+esquines = 0;
+
 function jugadaCPU(){
   //Declaro tots els moviments que es podrien fer
   poderFerTresEnRatlla = ferTresEnRatlla();
@@ -7,6 +12,10 @@ function jugadaCPU(){
   perTeparPossibleTresEnRatlla = taparPossibleTresEnRatlla()
   //Es troba una posicio random
   jugRan = jugadaRandom();
+  //Intenta fica cercle en el mig
+  perTeparCentre = taparCentre();
+  //Busca si el altre jugador té una creu el mitg fica els cercles a les esquines
+  perTeparEsquines = teparCostatsSiCreuElCentre();
 
   //Variable on es guardara la jugada triada
   jugada = "";
@@ -16,11 +25,60 @@ function jugadaCPU(){
     jugada = poderFerTresEnRatlla;
   }else if(perTeparPossibleTresEnRatlla != ""){
     jugada = perTeparPossibleTresEnRatlla;
+  }else if(perTeparCentre != ""){
+    jugada = perTeparCentre;
+  }else if(perTeparEsquines != ""){
+    jugada = perTeparEsquines;
   }else if(jugRan != ""){
     jugada = jugRan;
   }
 
   return jugada;
+}
+
+function taparCentre(){
+  //Varaible on es guardara la posicio
+  pos = "";
+  //Mira si hi ha algun cercle o creu en el centre
+  if(mapaClicks[1][1] == 0){
+    pos = "B2";
+    centraTepat = true;
+  }
+  //Retorna posicio
+  return pos;
+}
+
+function teparCostatsSiCreuElCentre() {
+  //Varaible on es guardara la posicio
+  pos = "";
+  //Mira si les esquines estan tepades i si no estan tepades busca quina pot tapar
+  if(!siEsquinesTepades()){
+    //Variable on dire si s'ha trobat el lloc
+    tornarATriarLloc = true;
+    //Mira si pots ficar alguna creu a la esquina
+    while (tornarATriarLloc) {
+      //Agafa posicio random
+      r = Math.random();
+      if(r<1/4){
+        pos = "A1";
+      }else if(r>1/4&&r<2/4){
+        pos = "A3";
+      }else if (r>2/4&&r<3/4) {
+        pos = "C1";
+      }else if (r>3/4&&r<1) {
+        pos = "C3";
+      }
+
+      //Agafa la esquina triada i la passa per mirar en el tauler de clicks
+      lloc = taulerAMapaDeClicks(pos);
+
+      //Mira si la esquina triada hi ha ja una creu o un cercle
+      tornarATriarLloc = mapaClicks[lloc[0]][lloc[1]]!=0;
+    }
+
+  }
+  return pos;
+
 }
 
 function taparPossibleTresEnRatlla(){
@@ -65,6 +123,8 @@ function taparPossibleTresEnRatlla(){
   //Torna la posicio que té de tapar
   return pos;
 }
+
+
 
 function ferTresEnRatlla() {
   //Variable on es guardarà la posicio del cercle que ficarà la cpu
@@ -154,4 +214,15 @@ function jugadaRandom() {
   }
   //torna la posicio triada aleatoriament
   return pos;
+}
+
+function siEsquinesTepades() {
+  //Variable on es dira si les esquines estan tepades
+  esquinesOcupades = false;
+  //Es mira si totes les esquines estan tepades
+  if(mapaClicks[0][0] != 0 && mapaClicks[2][0] != 0 && mapaClicks[0][2] != 0 && mapaClicks[2][2] != 0){
+    esquinesOcupades = true;
+  }
+  //Torna si estan ocupade o no
+  return esquinesOcupades;
 }
