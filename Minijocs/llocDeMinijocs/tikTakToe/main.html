@@ -6,29 +6,32 @@
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|VT323&display=swap" rel="stylesheet">
   </head>
   <body>
-    <br><br>
     <center>
-      <u><h1>TikTakToe</h1></u>
-      <br>
-      <img onmouseout="reiniciarStyles()" onmouseover="mercar('A1')" onclick="jugar('A1')" src="imatges/blanc.png" Alt="" id="A1"><img onmouseout="reiniciarStyles()" onmouseover="mercar('A2')" onclick="jugar('A2')" src="imatges/blanc.png" alt="" id="A2"><img onmouseout="reiniciarStyles()" onmouseover="mercar('A3')" onclick="jugar('A3')" src="imatges/blanc.png" alt="" id="A3">
-      <br>
-      <img onmouseout="reiniciarStyles()" onmouseover="mercar('B1')" onclick="jugar('B1')" src="imatges/blanc.png" alt="" id="B1"><img onmouseout="reiniciarStyles()" onmouseover="mercar('B2')" onclick="jugar('B2')" src="imatges/blanc.png" alt="" id="B2"><img onmouseout="reiniciarStyles()" onmouseover="mercar('B3')" onclick="jugar('B3')" src="imatges/blanc.png" alt="" id="B3">
-      <br>
-      <img onmouseout="reiniciarStyles()" onmouseover="mercar('C1')" onclick="jugar('C1')" src="imatges/blanc.png" alt="" id="C1"><img onmouseout="reiniciarStyles()" onmouseover="mercar('C2')" onclick="jugar('C2')" src="imatges/blanc.png" alt="" id="C2"><img onmouseout="reiniciarStyles()" onmouseover="mercar('C3')" onclick="jugar('C3')" src="imatges/blanc.png" alt="" id="C3">
+      <div>
+        <br>
+        <a href="unJugador.html"><input type="button" value="UN JUGADOR"></a>
+        <br>
+        <a href="dosJugadors.html"><input type="button" value="DOS JUGADORS"></a>
+      </div>
     </center>
-    <script src="scripts/main.js" charset="utf-8"></script>
-    <script src="scripts/cpu.js" charset="utf-8"></script>
     <style media="screen">
-      img{
-        border:1px solid grey;
-        width:100px;
-        height:100px;
-      }
-      tr{
-        border: 1px solid black;
-      }
       h1{
         font-family: 'Press Start 2P', cursive;
+      }
+      div{
+        position:relative;
+        top:150px;
+        width:200px;
+        height:180px;
+        border:10px solid black;
+        background-color: grey;
+      }
+      input{
+        height:70px;
+        width:150px;
+      }
+      body{
+        background-color: rgb(240,240,240);
       }
     </style>
   </body>

@@ -7,55 +7,49 @@ mapaClicks = [[0,0,0],[0,0,0],[0,0,0]];
 
 //Assegura encara més si algú a guanyat
 continuar = true;
-
+//Numero de ronda
+ronda = 1;
 function jugar(x) {
-  //La funcio no funcionara quan l'usuari clici en un lloc que hi ha una creu o cercle
-  //o quan ja s'ha acabat la partida
-  p = taulerAMapaDeClicks(x);
-  if(mapaClicks[p[0]][p[1]] == 0 && continuar){
-    /////////RONDA JUGADOR/////////////
-    //Agafa tot el tauler on estan les imatges
-    tauler = agafarTauler();
-    //Marca la creu de el jugador/usuari on clica
-    mercarCreu(x);
+  //diu si s'ha acabat la partida
+  if(continuar){
+    //tria a qui li toca
+    if(ronda == 1){
+      /////////RONDA JUGADOR/////////////
+      //Agafa tot el tauler on estan les imatges
+      tauler = agafarTauler();
+      //Marca la creu de el jugador/usuari on clica
+      mercarCreu(x);
 
-    /////////////RONDA CPU//////////////
+      //Canvia de ronda
+      ronda = 2;
+    }else if(ronda == 2){
+      /////////RONDA JUGADOR 2/////////////
+      //Agafa tot el tauler on estan les imatges
+      tauler = agafarTauler();
+      //Marca la creu de el jugador/usuari on clica
+      mercarCercle(x);
 
-    //Comença mirant si ja a guanyat algú
-    guanyador = quiHaGuanyat();
-    if(continuar){
-      //Marca el cercle en la posicio on el cpu vol
-      //PD: com que sempre acabarà ultim és millor veure abanç si guanya elgú
-      //que fer que el CPU tiri.
-      mercarCercle(jugadaCPU());
+      //Canvia de ronda
+      ronda = 1;
     }else{
-      //Diu qui ha guanyat
-      if(guanyador == 0){
-        alert("Heu empetat");
-      }else if(guanyador == 1){
-        alert("Ha guanyat el Jugador 1");
-      }else if(guanyador == 2){
-        alert("Ha guanyat la CPU");
-      }
-      reiniciar(mapaClicks);
-      reiniciarStyles();
+      alert("ERROR");
     }
-
-    //Ara es mira si el CPU a guanyat en la seva ronda
+    //mira si ha gaunyat algú
     guanyador = quiHaGuanyat();
+    //Si ja ha gunyat algú la partida no continuarà així que puc utilitzar la variable continuar per saber
+    //indirectament quan ha guanyt algú
     if(!continuar){
-      //Diu qui ha guanyat
-      if(guanyador == 0){
-        alert("Heu empetat");
-      }else if(guanyador == 1){
+      //Es tria i es diu qui a guanyat o si s'ha empetat
+      if(guanyador == 1){
         alert("Ha guanyat el Jugador 1");
       }else if(guanyador == 2){
-        alert("Ha guanyat la CPU");
+        alert("Ha guanyat el Jugador 2");
+      }else if(guanyador == 0){
+        alert("Heu empatat");
       }
-      reiniciar(mapaClicks);
-      reiniciarStyles();
     }
   }
+
 }
 
 function agafarTauler() {
