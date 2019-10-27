@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Quatre en ratlla</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|VT323&display=swap" rel="stylesheet">
+  </head>
+  <body onload="ficarImatge()">
+    <center>
+      <br>
+      <h1><u>Quatre en Ratlla</u></h1>
+      <br>
+      <div class="taula">
+        <a href="vsCPU.html"><input id="0" onmouseover="mercar(0)" onmouseout="desmarcar(0)" type="button" name="" value="Un Jugador"></a>
+        <a href="dosJugadors.html"> <input id="1" onmouseover="mercar(1)" onmouseout="desmarcar(1)" type="button" name="" value="Dos Jugadors"> </a>
+      </div>
+    </center>
+
+    <style media="screen">
+      h1{
+        font-family: 'Press Start 2P', cursive;
+      }
+      .taula{
+        width:420px;
+        height: 120px;
+        position: relative;
+        top:100px;
+        border:2px solid black;
+        background: rgba(150,150,150,0.75);
+      }
+      input{
+        width:200px;
+        height:100px;
+        border:3px outset black;
+        font-size:25px;
+        font-family: 'VT323', cursive;
+        position:relative;
+        top:10px;
+      }
+      body{
+        background-repeat: no-repeat;
+      }
+    </style>
+
+    <script src="scripts/style.js" charset="utf-8"></script>
+    <script src="scripts/opcionsDeFons.js" charset="utf-8"></script>
+  </body>
+</html>

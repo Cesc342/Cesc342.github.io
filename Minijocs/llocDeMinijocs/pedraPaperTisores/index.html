@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Pedra Paper Tisores</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|VT323&display=swap" rel="stylesheet">
+  </head>
+  <body onload="ficarImatge()">
+
+    <center>
+      <br>
+      <u><h1>Pedra Paper Tisores</h1></u>
+      <br><br>
+      <h2>Tu:</h2>
+      <img style="" src="imatges/pedra.jpg" onmouseover="assenyalar(0);" onmouseout="reiniciar();" onmousedown="jugar(0);" id="0">
+      <img style="" src="imatges/paper.jpg" onmouseover="assenyalar(1);" onmouseout="reiniciar();" onmousedown="jugar(1);" id="1">
+      <img style="" src="imatges/tisores.jpg" onmouseover="assenyalar(2)" onmouseout="reiniciar();" onmousedown="jugar(2);" id="2">
+      <br><br>
+      <h2>Ordinador:</h2>
+      <img style="" src="imatges/pedra.jpg" id="C0">
+      <img style="" src="imatges/paper.jpg" id="C1">
+      <img style="" src="imatges/tisores.jpg" id="C2">
+      <br>
+      <br>
+      <br>
+    </center>
+
+    <style media="screen">
+    h1{
+      font-family: 'Press Start 2P', cursive;
+    }
+    h2{
+      font-family: 'VT323', monospace;
+      font-size:30px;
+    }
+    img{
+      height: 179px;
+      width: 131px;
+      border:1px solid rgba(100,100,100,0.75);
+    }
+    </style>
+
+    <script src="scripts/main.js" charset="utf-8"></script>
+    <script src="scripts/opcionsDeFons.js" charset="utf-8"></script>
+  </body>
+</html>

@@ -5,25 +5,30 @@
     <title>TikTakToe</title>
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|VT323&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body onload="ficarImatge()">
     <br><br>
     <center>
       <u><h1>TikTakToe</h1></u>
       <h2>Jugador 1 VS Jugador 2</h2>
-      <br>
-      <img onmouseout="reiniciarStyles()" onmouseover="mercar('A1')" onclick="jugar('A1')" src="imatges/blanc.png" Alt="" id="A1"><img onmouseout="reiniciarStyles()" onmouseover="mercar('A2')" onclick="jugar('A2')" src="imatges/blanc.png" alt="" id="A2"><img onmouseout="reiniciarStyles()" onmouseover="mercar('A3')" onclick="jugar('A3')" src="imatges/blanc.png" alt="" id="A3">
-      <br>
-      <img onmouseout="reiniciarStyles()" onmouseover="mercar('B1')" onclick="jugar('B1')" src="imatges/blanc.png" alt="" id="B1"><img onmouseout="reiniciarStyles()" onmouseover="mercar('B2')" onclick="jugar('B2')" src="imatges/blanc.png" alt="" id="B2"><img onmouseout="reiniciarStyles()" onmouseover="mercar('B3')" onclick="jugar('B3')" src="imatges/blanc.png" alt="" id="B3">
-      <br>
-      <img onmouseout="reiniciarStyles()" onmouseover="mercar('C1')" onclick="jugar('C1')" src="imatges/blanc.png" alt="" id="C1"><img onmouseout="reiniciarStyles()" onmouseover="mercar('C2')" onclick="jugar('C2')" src="imatges/blanc.png" alt="" id="C2"><img onmouseout="reiniciarStyles()" onmouseover="mercar('C3')" onclick="jugar('C3')" src="imatges/blanc.png" alt="" id="C3">
-    </center>
+      <div>
+        <br>
+        <img onmouseout="reiniciarStyles()" onmouseover="mercar('A1')" onclick="jugar('A1')" src="imatges/blanc.png" Alt="" id="A1"><img onmouseout="reiniciarStyles()" onmouseover="mercar('A2')" onclick="jugar('A2')" src="imatges/blanc.png" alt="" id="A2"><img onmouseout="reiniciarStyles()" onmouseover="mercar('A3')" onclick="jugar('A3')" src="imatges/blanc.png" alt="" id="A3">
+        <br>
+        <img onmouseout="reiniciarStyles()" onmouseover="mercar('B1')" onclick="jugar('B1')" src="imatges/blanc.png" alt="" id="B1"><img onmouseout="reiniciarStyles()" onmouseover="mercar('B2')" onclick="jugar('B2')" src="imatges/blanc.png" alt="" id="B2"><img onmouseout="reiniciarStyles()" onmouseover="mercar('B3')" onclick="jugar('B3')" src="imatges/blanc.png" alt="" id="B3">
+        <br>
+        <img onmouseout="reiniciarStyles()" onmouseover="mercar('C1')" onclick="jugar('C1')" src="imatges/blanc.png" alt="" id="C1"><img onmouseout="reiniciarStyles()" onmouseover="mercar('C2')" onclick="jugar('C2')" src="imatges/blanc.png" alt="" id="C2"><img onmouseout="reiniciarStyles()" onmouseover="mercar('C3')" onclick="jugar('C3')" src="imatges/blanc.png" alt="" id="C3">
+        <br>
+      </div>
+      </center>
     <script src="scripts/dosJugadors.js" charset="utf-8"></script>
     <script src="scripts/cpu.js" charset="utf-8"></script>
+    <script src="scripts/opcionsDeFons.js" charset="utf-8"></script>
     <style media="screen">
       img{
         border:1px solid grey;
         width:100px;
         height:100px;
+        background-color: white;
       }
       tr{
         border: 1px solid black;
