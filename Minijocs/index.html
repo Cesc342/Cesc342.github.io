@@ -5,12 +5,19 @@
     <title>Index</title>
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|VT323&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body onload="ficarImatge()">
+    <a href="opcions.html"> <img src="fotosGenerals/opciones.png" alt="" style="border:1px solid black; position:relative; top:10px; left:10px; width:56px; height:33px; background-color:rgba(120,120,120,0.8);"> </a>
+    <br><br>
     <center>
-      <u><h1>Minijocs:</h1></u>
-      <a href="llocDeMinijocs/pedraPaperTisores/pedraPaperTisores.html">Pedra, Paper, Tisores</a><br><br>
+      <div>
+        <br>
+        <u><h1>Minijocs:</h1></u>
+        <a href="llocDeMinijocs/pedraPaperTisores/index.html"><input id="0" onmouseover="mercar(0)" onmouseout="desmarcar(0)" type="button" name="" value="Pedra Paper Tisores"></a><br><br>
 
-      <a href="llocDeMinijocs/tikTakToe/main.html">TikTakToe</a>
+        <a href="llocDeMinijocs/tikTakToe/index.html"><input id="1" onmouseover="mercar(1)" onmouseout="desmarcar(1)" type="button" name="" value="Tik Tak Toe"></a><br><br>
+
+        <a href="llocDeMinijocs/quatreEnRatlle/index.html"><input id="2" onmouseover="mercar(2)" onmouseout="desmarcar(2)" type="button" name="" value="Quatre en Ratlle"></a>
+      </div>
     </center>
 
     <style media="screen">
@@ -21,6 +28,27 @@
       font-family: 'VT323', monospace;
       font-size: 30px
     }
+    body{
+      background-repeat: no-repeat;
+    }
+    div{
+      border:10px groove black;
+      background-color: rgba(150,150,150,0.5);
+      width: 500px;
+      height: 500px;
+    }
+    input{
+      background-color: rgba(200, 200, 200, 0.75);
+      border: 3px inset black;
+      height: 100px;
+      width: 400px;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 15px;
+    }
     </style>
+
+    <script src="scriptsGenerals/opcions.js" charset="utf-8"></script>
+    <script src="scriptsGenerals/opcionsDeFons.js" charset="utf-8"></script>
+    <script src="scriptsGenerals/style.js" charset="utf-8"></script>
   </body>
 </html>
