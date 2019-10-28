@@ -18,9 +18,16 @@ ronda = 1;
 //Diu si el es continua o no
 continuar = true;
 
+//Diu si la cpu ja a jugat
+cpuHaJugat = true;
+
 function jugar(x){
   //Si es diu que el joc no continui el ejoc no continua
-  if(continuar){
+  if(continuar && cpuHaJugat && !fileraOcupada(x)){
+    //Encara no ha jugat la cpu
+    cpuHaJugat = false;
+
+    //Fica la cleu on el usuari a clicat
     ficarCreu(x);
 
     //Es mira si ha guanyat algú
@@ -52,6 +59,8 @@ function jugar(x){
           alert("A guanyat la CPU");
         }
       }
+      //Diu que la cpu ja ha jugat
+      cpuHaJugat = true;
     }
   }
 
@@ -60,17 +69,23 @@ function jugar(x){
 ////////////////// MARCAR I DESMARCAR //////////////////
 
 function mercar(x){
-  //Agafa la posicio del tauler buscant el lloc on el ratoli esta passant per sobre
-  pos = buscarLloc(x);
-  //Marca el borde
-  ficarCanto(pos);
+  //Si la fila ja esta ocupada
+  if(!fileraOcupada(x)){
+    //Agafa la posicio del tauler buscant el lloc on el ratoli esta passant per sobre
+    pos = buscarLloc(x);
+    //Marca el borde
+    ficarCanto(pos);
+  }
 }
 
 function desmarcar(x){
-  //Agafa la posicio del tauler buscant el lloc on s'ha anat el ratoli
-  pos = buscarLloc(x);
-  //Marca el borde
-  treureCanto(pos);
+  //Si la fila ja esta ocupada
+  if(!fileraOcupada(x)){
+    //Agafa la posicio del tauler buscant el lloc on s'ha anat el ratoli
+    pos = buscarLloc(x);
+    //Marca el borde
+    treureCanto(pos);
+  }
 }
 
 /// SUB ///

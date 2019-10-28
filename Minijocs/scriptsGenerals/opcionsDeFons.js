@@ -1,8 +1,8 @@
 //Array on es guarden totes les imatges
 imatges = [
-  ["fotosGenerals/fonsDamati1.png"],
-  ["fotosGenerals/fonsTarda1.png"],
-  ["fotosGenerals/fonsNit1.png"]
+  ["https://cesc342.github.io/Minijocs/fotosGenerals/fonsDamati1.png"],
+  ["https://cesc342.github.io/Minijocs/fotosGenerals/fonsTarda1.png"],
+  ["https://cesc342.github.io/Minijocs/fotosGenerals/fonsNit1.png"]
 ];
 
 function ficarImatge() {

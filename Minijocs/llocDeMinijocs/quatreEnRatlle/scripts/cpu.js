@@ -59,7 +59,7 @@ function possibleVertical() {
   //Busca possibles quatre en ratlle en vertical
   //Y
   i = 0;
-  while(i<5){
+  while(i<4){
     //X
     o = 0;
     while(o < mapaClicks[i].length){
@@ -455,7 +455,7 @@ function possibleEnemicDiagonalEsquerra() {
     }
     o++;
   }
-  
+
   //Es torna la filera on es té de tirar el cercle
   return filera;
 }
