@@ -120,7 +120,7 @@ function mercarCreu(x) {
     mercarCreuEnElMapaDeClicks(x);
 
     //Fica la imatge de la creu el lloc on s'ha clicat
-    lloc.src = "imatges/creu.png";
+    lloc.src = "https://cesc342.github.io/Minijocs/fotosGenerals/creu.png";
   }
 }
 
@@ -135,7 +135,7 @@ function mercarCercle(x) {
     mercarCercleEnElMapaDeClicks(x);
 
     //Fica la imatge de el cercle el lloc on a "clicat" la cpu
-    lloc.src = "imatges/cercle.png";
+    lloc.src = "https://cesc342.github.io/Minijocs/fotosGenerals/cercle.png";
   }
 }
 

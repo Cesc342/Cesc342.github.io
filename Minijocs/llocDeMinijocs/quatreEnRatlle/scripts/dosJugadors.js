@@ -162,7 +162,7 @@ function ficarCercla(x){
   //Agafa la imatge
   img = document.getElementById(pos);
   //Canvia la foto
-  img.src = "imatges/cercle.png";
+  img.src = "https://cesc342.github.io/Minijocs/fotosGenerals/cercle.png";
   //Es torna a marcar per ensnyar on es ficara la següent pessa si la tira el mateix lloc
   mercar(x);
 }
@@ -179,7 +179,7 @@ function ficarCreu(x){
   //Agafa la imatge
   img = document.getElementById(pos);
   //Canvia la foto
-  img.src = "imatges/creu.png";
+  img.src = "https://cesc342.github.io/Minijocs/fotosGenerals/creu.png";
   //Es torna a marcar per ensnyar on es ficara la següent pessa si la tira el mateix lloc
   mercar(x);
 }
