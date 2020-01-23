@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IA</title>
+</head>
+<body>
+    <script>
+        function neurona(){
+            this.x = Math.random();
+            this.b = Math.random()*2 - 1;
+            this.pensar = (inp) => {
+                return inp * this.x + this.b;
+            }
+        }
+        
+        proba1 = [[new neurona()],[new neurona(),new neurona(),new neurona()],[new neurona()]];
+        proba2 = [[new neurona()],[new neurona(),new neurona(),new neurona()],[new neurona()]];
+        
+        function pensar(xarxa,inp){
+            r1 = xarxa[0][0].pensar(inp)
+            r2 = [xarxa[1][0].pensar(r1),xarxa[1][1].pensar(r1),xarxa[1][2].pensar(r1)]
+            r3 = xarxa[2][0].pensar(r2[0]+r2[1]+r2[2]);
+            return r3;
+        }
+        
+        function procrear(xarxa1,xarxa2){
+            nova = [];
+            for(c in xarxa1){
+                capa = [];
+                for(n in xarxa1[c]){
+                    if(Math.random() < 0.5){
+                        capa.push(xarxa1[c][n]);
+                    }else{
+                            capa.push(xarxa2[c][n]); 
+                    }
+                }
+                nova.push(capa)
+            }
+            return nova;
+        }
+
+
+    </script>
+</body>
+</html>
