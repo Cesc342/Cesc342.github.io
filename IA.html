@@ -16,6 +16,16 @@
             }
         }
         
+        function crearXarxa(){
+            return [[new neurona()],[new neurona(),new neurona(),new neurona()],[new neurona()]];
+        }
+        
+        function comprovar(inp,mult,out){
+            s = out-(inp * mult);
+            d = Math.sqrt(Math.pow(s,mult));
+            return d;
+        }
+        
         proba1 = [[new neurona()],[new neurona(),new neurona(),new neurona()],[new neurona()]];
         proba2 = [[new neurona()],[new neurona(),new neurona(),new neurona()],[new neurona()]];
         
