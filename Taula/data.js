@@ -3,7 +3,6 @@ links = [
     "audios/HostiaPilotes.mp3",
     "audios/ESTEFANIA.mp3",
     "audios/LaHoraDeLaPaja.mp3",
-    "audios/LasPajasEsoEs.mp3",
     "audios/Link01.mp3",
     "audios/Link02.mp3",
     "audios/Link03.mp3",
@@ -13,15 +12,23 @@ links = [
     "audios/Link07.mp3",
     "audios/Link08.mp3",
     "audios/Link09.mp3",
+    "audios/FEnElChatPorChimuelo.mp3",
     "audios/Calvo01.mp3",
     "audios/Calvo02.mp3",
     "audios/Calvo03.mp3",
     "audios/Calvo04.mp3",
     "audios/Calvo05.mp3",
+    "audios/Abduscan.mp3",
+    "audios/LasPajasEsoEs.mp3",
     "audios/DicLogo.mp3",
     "audios/HomaEWa.mp3",
     "audios/Nani.mp3",
-    "audios/YEET.mp3"
+    "audios/YEET.mp3",
+    "audios/HereWeGoAgain.mp3",
+    "audios/Marica.mp3",
+    "audios/SeHaMataoMiHijo.mp3",
+    "audios/LesVoyACortarElPito.mp3",
+    "audios/Mercadona.mp3"
 ]
 
 audios = [];
