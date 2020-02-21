@@ -1,6 +1,8 @@
 n = 0;
 doc = document.getElementById(data[0][0]);
 
+for()
+
 document.addEventListener("keypress",(e)=>{
     i = 0;
     trobat = false;

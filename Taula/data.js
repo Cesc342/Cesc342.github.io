@@ -62,7 +62,11 @@ lloc = [document.getElementById("lloc1"),document.getElementById("lloc2"),docume
 for(i in teclat){
     td = document.createElement("td");
     td.innerText = teclat[i].toUpperCase();
-    td.id = teclat[i];
+    td.id = i;
+    td.addEventListener("click",(e)=>{
+        lloc = e.target;
+        data[1][lloc.id].play();
+    })
     if(i<=12){
         lloc[0].appendChild(td);
     }else if(i>12 && i<=24){
